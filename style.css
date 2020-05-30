@@ -35,6 +35,43 @@ body {
   margin-bottom: 10px;
 }
 
+.clock-container {
+  position: absolute;
+  top: 100px;
+  left: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 150px;
+}
+
+.clock-ticker {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.session-btn {
+  border-style: none;
+  border-radius: 12px;
+  padding: 7px 7px;
+  width: 120px;
+  height: 30px;
+  background-color: #607d8b15;
+  color: white;
+  font-size: 12px;
+}
+
+.session-btn:hover,
+.session-btn:active {
+  background-color: #92b1c0;
+}
+
+.session-btn:focus {
+  outline: none;
+}
+
 .brand,
 .quote {
   margin-left: 395px;
