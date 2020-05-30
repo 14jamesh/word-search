@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Arial";
+}
+
+/* hero styling */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 45vh;
+
+  color: white;
+  background-image: linear-gradient(
+      rgba(15, 15, 15, 0.185),
+      rgba(14, 13, 13, 0.822)
+    ),
+    url("https://images.unsplash.com/photo-1590423203582-e7f7968d8807?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-position: center;
+  background-size: cover;
+}
+
+.brand {
+  font-weight: lighter;
+  font-size: 40px;
+
+  margin-top: 120px;
+  margin-bottom: 10px;
+}
+
+.brand,
+.quote {
+  margin-left: 395px;
+}
+
+.quote {
+  margin-top: 10px;
+  margin-bottom: 0px;
+
+  font-style: italic;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.q-author {
+  font-weight: bold;
+}
+
+/* form styling */
+
+.wrapper-dict {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+
+  background-color: #3a393911;
+}
+
+.user-input {
+  width: 450px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+label {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+input {
+  font-size: 15px;
+  border-radius: 15px;
+  border-style: none;
+  padding: 10px 10px;
+  text-align: center;
+  height: 35px;
+
+  background-color: #e0e0e0;
+}
+
+.submit-button {
+  width: 80px;
+  height: 35px;
+  border-radius: 15px;
+  font-size: 15px;
+  background-color: #607d8b;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #07031bbe;
+}
+
+.submit-button:focus,
+input:focus {
+  outline: none;
+}
+
+/* dictionary styling section */
+
+.result-section {
+  margin-top: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 60%;
+  height: 320px;
+
+  display: flex;
+  justify-content: flex-start;
+
+  background-color: rgba(128, 128, 128, 0.13);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.word-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  align-items: flex-start;
+}
+
+.word-heading,
+.def-heading,
+.syn-heading,
+.definition,
+.synonym {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/*synonym - flexbox */
+
+/*doing this so that when I query the words from the api I can just slide them in one after the other over and over" */
+
+.syn-flex {
+  display: flex;
+  flex-wrap: wrap; /*makes words wrap onto the next line as they come in from the API. Only allowing 15 words. Don't want to overwhelm user. It's enough. */
+  width: 100%;
+}
+
+.synonym {
+  margin-right: 10px;
+}
+
+/* CARD STYLING font */
+
+.word-heading,
+.definition,
+.synonym {
+  font-weight: lighter;
+}
+
+.word-heading {
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 35px;
+}
